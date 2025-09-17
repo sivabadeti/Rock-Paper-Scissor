@@ -1,0 +1,205 @@
+body {
+  height: auto;
+  width: auto;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  height: 80px;
+  width: 100%;
+  background-color: rgb(9, 28, 28);
+  color: azure;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.rock,
+.paper,
+.scissor {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: aqua;
+  overflow: hidden;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.rock:hover,
+.paper:hover,
+.scissor:hover {
+  border: 2px solid black;
+  transform: scale(1.05);
+}
+
+.rockimg,
+.paperimg,
+.scissorimg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 30px;
+}
+
+.points {
+  font-size: 20px;
+  text-align: center;
+}
+
+.yourpoints,
+.comppoints {
+  font-size: 2rem;
+}
+
+.content {
+  height: 50px;
+  min-width: 250px;
+  background-color: rgb(223, 255, 127);
+  border: 2px solid black;
+  border-radius: 30px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.reset {
+  height: 40px;
+  width: 120px;
+  background-color: rgb(231, 195, 77);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.reset:hover {
+  border: 2px solid black;
+}
+
+.playagain {
+  height: auto;
+  min-height: 40px;
+  max-width: 500px;
+  background-color: rgb(215, 114, 13);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.playagain:hover {
+  border: 2px solid black;
+}
+
+.newgame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+}
+
+/* 📱 Responsive Styles */
+
+/* Laptops / Tablets */
+@media (max-width: 992px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .rock,
+  .paper,
+  .scissor {
+    height: 130px;
+    width: 130px;
+  }
+
+  /* Make result box smaller on laptops */
+  .content {
+    font-size: 18px;
+    height: 40px;
+    min-width: 180px;   /* reduced width */
+    max-width: 200px;   /* capped width */
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .heading {
+    font-size: 20px;
+    height: 60px;
+  }
+
+  .main {
+    gap: 15px;
+  }
+
+  .rock,
+  .paper,
+  .scissor {
+    height: 100px;
+    width: 100px;
+  }
+
+  .scoreboard {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Smaller score points in mobile */
+  .yourpoints,
+  .comppoints {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    font-size: 16px;
+    width: 80%;   /* auto fit to screen */
+    height: auto;
+    padding: 10px;
+  }
+
+  .reset,
+  .playagain {
+    width: 90%;
+    font-size: 0.9rem;
+    border-radius: 15px;
+  }
+}
